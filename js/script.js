@@ -5,11 +5,13 @@ window.addEventListener("load", () => {
     let index;
 
     onClickAnswer = (event) => {
+        let timeBeforeNext;
         if(event.target.textContent == data[index].romaji) {
             event.target.classList.add("true");
+            timeBeforeNext = 500;
         } else {
             event.target.classList.add("false");
-    
+            timeBeforeNext = 2000;
             for (const btn of answersBtns) {
                 if(btn.textContent == data[index].romaji) {
                     btn.classList.add("true");
@@ -30,7 +32,7 @@ window.addEventListener("load", () => {
                 btn.addEventListener("click", onClickAnswer, false);
             }
             index = generate(questionText, answersBtns);
-        }, 2000);
+        }, timeBeforeNext);
     }
 
     for (const btn of answersBtns) {
