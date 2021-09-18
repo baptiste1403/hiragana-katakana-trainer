@@ -8,7 +8,17 @@
 .answer-btn {
     background: turquoise;
     height: 100px;
+    line-height: 100px;
     width: 100px;
     text-align: center;
     font-size: 40px;
+    vertical-align: middle;
+}
+
+.true {
+    background: chartreuse;
+}
+
+.false {
+    background: crimson;
 }
