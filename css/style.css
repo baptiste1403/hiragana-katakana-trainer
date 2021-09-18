@@ -45,6 +45,7 @@ body {
     vertical-align: middle;
     flex-basis: 20vh;
     border-radius: 1vh;
+    cursor: pointer;
 }
 
 .true {
