@@ -1,6 +1,6 @@
 window.addEventListener("load", () => {
     document.addEventListener("keydown", (event) => {
-        const display = this.document.querySelector(".display");
+        const display = this.document.querySelector(".question-box");
         const randint = getRandomInt(data.length);
         let listRomaji = [];
         listRomaji.push(data[randint].romaji);
@@ -19,8 +19,12 @@ window.addEventListener("load", () => {
             listRomaji[j] = temp;
         }
           
-        display.querySelector(".symbol").textContent = data[randint].symbol;
-        display.querySelector(".romaji").textContent = `${listRomaji[0]}, ${listRomaji[1]}, ${listRomaji[2]}, ${listRomaji[3]}`;
+        display.querySelector(".question").textContent = data[randint].symbol;
+        const answers = display.querySelectorAll(".answer-btn");
+        for (let i = 0; i < answers.length; i++) {
+            answers[i].textContent = listRomaji[i];
+        }
+        //display.querySelector(".romaji").textContent = `${listRomaji[0]}, ${listRomaji[1]}, ${listRomaji[2]}, ${listRomaji[3]}`;
     });
 });
 
