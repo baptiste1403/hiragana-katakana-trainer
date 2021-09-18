@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "thinoo";
+    src: url("../assets/fonts/Dosis-Book.ttf")
+}
+
 body {
     background-image: url(../assets/images/background.webp);
     background-size: cover;
@@ -7,6 +12,7 @@ body {
     width: 100vw;
     margin: 0;
     padding: 0;
+    cursor: url("../assets/cursors/arrow.cur"), auto;
 }
 
 
@@ -36,16 +42,18 @@ body {
 }
 
 .answer-btn {
-    background: turquoise;
+    display: flex;
+    background: #E56528;
     height: 20vh;
     line-height: 20vh;
     width: 20vh;
-    text-align: center;
-    font-size: 6vh;
-    vertical-align: middle;
     flex-basis: 20vh;
-    border-radius: 1vh;
-    cursor: pointer;
+    border-radius: 2vh;
+    justify-content: center;
+    font-size: 8vh;
+    font-family: "thinoo";
+    color: white;
+    cursor: url("../assets/cursors/link.cur"), auto;
 }
 
 .true {

@@ -2,15 +2,15 @@ window.addEventListener("load", () => {
     const display = this.document.querySelector(".question-box");
     const questionText = display.querySelector(".question");
     const answersBtns = display.querySelectorAll(".answer-btn");
-    let index;
+    let index;1
 
-    onClickAnswer = (event) => {
+    checkAnswer = (target) => {
         let timeBeforeNext;
-        if(event.target.textContent == data[index].romaji) {
-            event.target.classList.add("true");
+        if(target.textContent == data[index].romaji) {
+            target.classList.add("true");
             timeBeforeNext = 500;
         } else {
-            event.target.classList.add("false");
+            target.classList.add("false");
             timeBeforeNext = 2000;
             for (const btn of answersBtns) {
                 if(btn.textContent == data[index].romaji) {
@@ -18,11 +18,13 @@ window.addEventListener("load", () => {
                 }
             }
         }
-
+    
         for (const btn of answersBtns) {
             btn.removeEventListener("click", onClickAnswer);
         }
 
+        document.removeEventListener("keypress", onKeyForAnswer, false);
+    
         setTimeout(() => {
             for (const btn of answersBtns) {
                 btn.classList.remove("true");
@@ -31,14 +33,44 @@ window.addEventListener("load", () => {
             for (const btn of answersBtns) {
                 btn.addEventListener("click", onClickAnswer, false);
             }
+
+            document.addEventListener("keypress", onKeyForAnswer, false);
+
             index = generate(questionText, answersBtns);
         }, timeBeforeNext);
     }
 
+    onClickAnswer = (event) => {
+        checkAnswer(event.target);
+    };
+
+    onKeyForAnswer = (event) => {
+        switch (event.code) {
+            case "Numpad4":
+                checkAnswer(answersBtns[0]);
+                break;
+            case "Numpad5":
+                checkAnswer(answersBtns[1]);
+                break;
+            case "Numpad1":
+                checkAnswer(answersBtns[2]);
+                break;
+            case "Numpad2":
+                checkAnswer(answersBtns[3]);
+                break;
+            default:
+                break;
+        }
+    };
+
     for (const btn of answersBtns) {
         btn.addEventListener("click", onClickAnswer, false);
     }
+
+    document.addEventListener("keypress", onKeyForAnswer, false);
+
     index = generate(questionText, answersBtns);
+    
 });
 
 
