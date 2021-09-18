@@ -1,12 +1,12 @@
 [
     {
         "type" : "hiragana",
-        "symbol_path" : "le/chemin/du/fichier/image/du/symbol/ka.svg",
+        "symbol" : "か",
         "symbol_romanji" : "ka"
     },
     {
         "type" : "hiragana",
-        "symbol_path" : "le/chemin/du/fichier/image/du/symbol/ku.svg",
+        "symbol" : "く",
         "symbol_romanji" : "ku"
     }
 ]
