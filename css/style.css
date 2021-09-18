@@ -1,18 +1,38 @@
-.answer-box {
-    display: flexbox;
-    height: 400px;
-    justify-content: center;
+.question-box{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    gap: 4vh;
+}
 
+.question {
+    font-size: 20vh;
+}
+
+.answer-box {
+    margin: auto;
+    display: flex;
+    height: 41vh;
+    width: 41vh;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1vh;
+    align-items: center;
+    align-content: center;
 }
 
 .answer-btn {
     background: turquoise;
-    height: 100px;
-    line-height: 100px;
-    width: 100px;
+    height: 20vh;
+    line-height: 20vh;
+    width: 20vh;
     text-align: center;
-    font-size: 40px;
+    font-size: 6vh;
     vertical-align: middle;
+    flex-basis: 20vh;
+    border-radius: 1vh;
 }
 
 .true {
