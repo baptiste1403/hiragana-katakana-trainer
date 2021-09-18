@@ -1,4 +1,4 @@
-[
+data = [
     {
         "type" : "hiragana",
         "symbol" : "か",
