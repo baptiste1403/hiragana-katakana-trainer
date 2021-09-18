@@ -2,11 +2,11 @@
     {
         "type" : "hiragana",
         "symbol" : "か",
-        "symbol_romanji" : "ka"
+        "romanji" : "ka"
     },
     {
         "type" : "hiragana",
         "symbol" : "く",
-        "symbol_romanji" : "ku"
+        "romanji" : "ku"
     }
 ]
