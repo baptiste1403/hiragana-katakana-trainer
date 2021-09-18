@@ -1,0 +1,14 @@
+.answer-box {
+    display: flexbox;
+    height: 400px;
+    justify-content: center;
+
+}
+
+.answer-btn {
+    background: turquoise;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    font-size: 40px;
+}
