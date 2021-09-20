@@ -1,0 +1,17 @@
+<test-btn>
+    <div onclick={ clicked }>button</div>
+    <test-num val={this.state.number}></test-num>
+    <script>
+        export default {
+            onBeforeMount() {
+                this.state = {
+                    number = 0
+                };
+            },
+            clicked() {
+                this.state.number++;
+                this.update();
+            }
+        }
+    </script>
+</test-btn>

@@ -10,7 +10,8 @@
     <script src="js/data.js"></script>
     <script src="js/script.js"></script>
 
-    <script src="tags/test.riot" type="riot"></script>
+    <script src="tags/test-btn.riot" type="riot"></script>
+    <script src="tags/test-num.riot" type="riot"></script>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -27,9 +28,9 @@
     </body>
     <script>
         (async () => {
-            //await riot.compile(); // in-browser-compilation
+            await riot.compile(); // in-browser-compilation
             
-            //riot.mount('the-element-to-mount');
+            riot.mount('test-btn', 'test-num');
         })();
     </script>
 </html>
