@@ -10,8 +10,8 @@
     <script src="js/data.js"></script>
     <script src="js/script.js"></script>
 
-    <script src="tags/test-btn.riot" type="riot"></script>
-    <script src="tags/test-num.riot" type="riot"></script>
+    <script src="tags/testbtn.riot" type="riot"></script>
+    <script src="tags/testnum.riot" type="riot"></script>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -25,11 +25,11 @@
                 <div class="answer-btn"></div>
             </div>
         </div>
-        <test-btn></test-btn>
+        <testbtn></testbtn>
     </body>
     <script>
         (async () => {
-            await riot.compile(); // in-browser-compilation
+            await riot.compile();
             
             riot.mount('test-btn');
         })();
