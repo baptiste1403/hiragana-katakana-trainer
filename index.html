@@ -27,8 +27,9 @@
         <hello-world title="test"></hello-world>
     </body>
     <script>
-        riot.compile().then(()=>{
-            console.log(riot.mount('hello-world'));
-        });
+    (async () => {
+        await riot.compile();
+        riot.mount('hello-world');
+    })();
     </script>
 </html>
