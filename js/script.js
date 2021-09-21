@@ -2,7 +2,7 @@ window.addEventListener("load", () => {
     const display = this.document.querySelector(".question-box");
     const questionText = display.querySelector(".question");
     const answersBtns = display.querySelectorAll(".answer-btn");
-    let index;1
+    let index;
 
     checkAnswer = (target) => {
         let timeBeforeNext;

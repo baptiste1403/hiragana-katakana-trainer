@@ -537,536 +537,536 @@ data = [
         {
           "type": "katakana",
           "symbol": "カ",
-          "romanji": "ka"
+          "romaji": "ka"
         },
         {
           "type": "katakana",
           "symbol": "ク",
-          "romanji": "ku"
+          "romaji": "ku"
         },
         {
           "type": "katakana",
           "symbol": "ア",
-          "romanji": "a"
+          "romaji": "a"
         },
         {
           "type": "katakana",
           "symbol": "イ",
-          "romanji": "i"
+          "romaji": "i"
         },
         {
           "type": "katakana",
           "symbol": "ウ",
-          "romanji": "u"
+          "romaji": "u"
         },
         {
           "type": "katakana",
           "symbol": "エ",
-          "romanji": "e"
+          "romaji": "e"
         },
         {
           "type": "katakana",
           "symbol": "オ",
-          "romanji": "o"
+          "romaji": "o"
         },
         {
           "type": "katakana",
           "symbol": "キ",
-          "romanji": "ki"
+          "romaji": "ki"
         },
         {
           "type": "katakana",
           "symbol": "ケ",
-          "romanji": "ke"
+          "romaji": "ke"
         },
         {
           "type": "katakana",
           "symbol": "コ",
-          "romanji": "ko"
+          "romaji": "ko"
         },
         {
           "type": "katakana",
           "symbol": "タ",
-          "romanji": "ta"
+          "romaji": "ta"
         },
         {
           "type": "katakana",
           "symbol": "チ",
-          "romanji": "chi"
+          "romaji": "chi"
         },
         {
           "type": "katakana",
           "symbol": "ツ",
-          "romanji": "tsu"
+          "romaji": "tsu"
         },
         {
           "type": "katakana",
           "symbol": "テ",
-          "romanji": "te"
+          "romaji": "te"
         },
         {
           "type": "katakana",
           "symbol": "ト",
-          "romanji": "to"
+          "romaji": "to"
         },
         {
           "type": "katakana",
           "symbol": "サ",
-          "romanji": "sa"
+          "romaji": "sa"
         },
         {
           "type": "katakana",
           "symbol": "シ",
-          "romanji": "shi"
+          "romaji": "shi"
         },
         {
           "type": "katakana",
           "symbol": "ス",
-          "romanji": "su"
+          "romaji": "su"
         },
         {
           "type": "katakana",
           "symbol": "セ",
-          "romanji": "se"
+          "romaji": "se"
         },
         {
           "type": "katakana",
           "symbol": "ソ",
-          "romanji": "so"
+          "romaji": "so"
         },
         {
           "type": "katakana",
           "symbol": "ラ",
-          "romanji": "ra"
+          "romaji": "ra"
         },
         {
           "type": "katakana",
           "symbol": "リ",
-          "romanji": "ri"
+          "romaji": "ri"
         },
         {
           "type": "katakana",
           "symbol": "ル",
-          "romanji": "ru"
+          "romaji": "ru"
         },
         {
           "type": "katakana",
           "symbol": "レ",
-          "romanji": "re"
+          "romaji": "re"
         },
         {
           "type": "katakana",
           "symbol": "ロ",
-          "romanji": "ro"
+          "romaji": "ro"
         },
         {
           "type": "katakana",
           "symbol": "ナ",
-          "romanji": "na"
+          "romaji": "na"
         },
         {
           "type": "katakana",
           "symbol": "ニ",
-          "romanji": "ni"
+          "romaji": "ni"
         },
         {
           "type": "katakana",
           "symbol": "ヌ",
-          "romanji": "nu"
+          "romaji": "nu"
         },
         {
           "type": "katakana",
           "symbol": "ネ",
-          "romanji": "ne"
+          "romaji": "ne"
         },
         {
           "type": "katakana",
           "symbol": "ノ",
-          "romanji": "no"
+          "romaji": "no"
         },
         {
           "type": "katakana",
           "symbol": "ハ",
-          "romanji": "ha"
+          "romaji": "ha"
         },
         {
           "type": "katakana",
           "symbol": "ヒ",
-          "romanji": "hi"
+          "romaji": "hi"
         },
         {
           "type": "katakana",
           "symbol": "フ",
-          "romanji": "fu"
+          "romaji": "fu"
         },
         {
           "type": "katakana",
           "symbol": "ヘ",
-          "romanji": "he"
+          "romaji": "he"
         },
         {
           "type": "katakana",
           "symbol": "ホ",
-          "romanji": "ho"
+          "romaji": "ho"
         },
         {
           "type": "katakana",
           "symbol": "マ",
-          "romanji": "ma"
+          "romaji": "ma"
         },
         {
           "type": "katakana",
           "symbol": "ミ",
-          "romanji": "mi"
+          "romaji": "mi"
         },
         {
           "type": "katakana",
           "symbol": "ム",
-          "romanji": "mu"
+          "romaji": "mu"
         },
         {
           "type": "katakana",
           "symbol": "メ",
-          "romanji": "me"
+          "romaji": "me"
         },
         {
           "type": "katakana",
           "symbol": "モ",
-          "romanji": "mo"
+          "romaji": "mo"
         },
         {
           "type": "katakana",
           "symbol": "ヤ",
-          "romanji": "ya"
+          "romaji": "ya"
         },
         {
           "type": "katakana",
           "symbol": "ユ",
-          "romanji": "yu"
+          "romaji": "yu"
         },
         {
           "type": "katakana",
           "symbol": "ヨ",
-          "romanji": "yo"
+          "romaji": "yo"
         },
         {
           "type": "katakana",
           "symbol": "ハ",
-          "romanji": "wa"
+          "romaji": "wa"
         },
         {
           "type": "katakana",
           "symbol": "オ",
-          "romanji": "wo"
+          "romaji": "wo"
         },
         {
           "type": "katakana",
           "symbol": "ン",
-          "romanji": "n"
+          "romaji": "n"
         },
         {
           "type": "katakana1",
           "symbol": "ガ",
-          "romanji": "ga"
+          "romaji": "ga"
         },
         {
           "type": "katakana1",
           "symbol": "ギ",
-          "romanji": "gi"
+          "romaji": "gi"
         },
         {
           "type": "katakana1",
           "symbol": "グ",
-          "romanji": "gu"
+          "romaji": "gu"
         },
         {
           "type": "katakana1",
           "symbol": "ゲ",
-          "romanji": "ge"
+          "romaji": "ge"
         },
         {
           "type": "katakana1",
           "symbol": "ゴ",
-          "romanji": "go"
+          "romaji": "go"
         },
         {
           "type": "katakana1",
           "symbol": "ザ",
-          "romanji": "za"
+          "romaji": "za"
         },
         {
           "type": "katakana1",
           "symbol": "ジ",
-          "romanji": "ji"
+          "romaji": "ji"
         },
         {
           "type": "katakana1",
           "symbol": "ズ",
-          "romanji": "zu"
+          "romaji": "zu"
         },
         {
           "type": "katakana1",
           "symbol": "ゼ",
-          "romanji": "ze"
+          "romaji": "ze"
         },
         {
           "type": "katakana1",
           "symbol": "ゾ",
-          "romanji": "zo"
+          "romaji": "zo"
         },
         {
           "type": "katakana1",
           "symbol": "ダ",
-          "romanji": "da"
+          "romaji": "da"
         },
         {
           "type": "katakana1",
           "symbol": "ジ",
-          "romanji": "dji"
+          "romaji": "dji"
         },
         {
           "type": "katakana1",
           "symbol": "ズ",
-          "romanji": "dzu"
+          "romaji": "dzu"
         },
         {
           "type": "katakana1",
           "symbol": "デ",
-          "romanji": "de"
+          "romaji": "de"
         },
         {
           "type": "katakana1",
           "symbol": "ド",
-          "romanji": "do"
+          "romaji": "do"
         },
         {
           "type": "katakana1",
           "symbol": "バ",
-          "romanji": "ba"
+          "romaji": "ba"
         },
         {
           "type": "katakana1",
           "symbol": "ビ",
-          "romanji": "bi"
+          "romaji": "bi"
         },
         {
           "type": "katakana1",
           "symbol": "ブ",
-          "romanji": "bu"
+          "romaji": "bu"
         },
         {
           "type": "katakana1",
           "symbol": "ベ",
-          "romanji": "be"
+          "romaji": "be"
         },
         {
           "type": "katakana1",
           "symbol": "ボ",
-          "romanji": "bo"
+          "romaji": "bo"
         },
         {
           "type": "katakana1",
           "symbol": "パ",
-          "romanji": "pa"
+          "romaji": "pa"
         },
         {
           "type": "katakana1",
           "symbol": "ピ",
-          "romanji": "pi"
+          "romaji": "pi"
         },
         {
           "type": "katakana1",
           "symbol": "プ",
-          "romanji": "pu"
+          "romaji": "pu"
         },
         {
           "type": "katakana1",
           "symbol": "ペ",
-          "romanji": "pe"
+          "romaji": "pe"
         },
         {
           "type": "katakana1",
           "symbol": "ポ",
-          "romanji": "po"
+          "romaji": "po"
         },
         {
           "type": "katakana2",
           "symbol": "キャ",
-          "romanji": "kya"
+          "romaji": "kya"
         },
         {
           "type": "katakana2",
           "symbol": "キュ",
-          "romanji": "kyu"
+          "romaji": "kyu"
         },
         {
           "type": "katakana2",
           "symbol": "キョ",
-          "romanji": "kyo"
+          "romaji": "kyo"
         },
         {
           "type": "katakana2",
           "symbol": "ギャ",
-          "romanji": "gya"
+          "romaji": "gya"
         },
         {
           "type": "katakana2",
           "symbol": "ギュ",
-          "romanji": "gyu"
+          "romaji": "gyu"
         },
         {
           "type": "katakana2",
           "symbol": "ギョ",
-          "romanji": "gyo"
+          "romaji": "gyo"
         },
         {
           "type": "katakana2",
           "symbol": "シャ",
-          "romanji": "sha"
+          "romaji": "sha"
         },
         {
           "type": "katakana2",
           "symbol": "シュ",
-          "romanji": "shu"
+          "romaji": "shu"
         },
         {
           "type": "katakana2",
           "symbol": "ショ",
-          "romanji": "sho"
+          "romaji": "sho"
         },
         {
           "type": "katakana2",
           "symbol": "ジャ",
-          "romanji": "ja"
+          "romaji": "ja"
         },
         {
           "type": "katakana2",
           "symbol": "ジュ",
-          "romanji": "ju"
+          "romaji": "ju"
         },
         {
           "type": "katakana2",
           "symbol": "ジョ",
-          "romanji": "jo"
+          "romaji": "jo"
         },
         {
           "type": "katakana2",
           "symbol": "ニャ",
-          "romanji": "nya"
+          "romaji": "nya"
         },
         {
           "type": "katakana2",
           "symbol": "ニュ",
-          "romanji": "nyu"
+          "romaji": "nyu"
         },
         {
           "type": "katakana2",
           "symbol": "ニョ",
-          "romanji": "nyo"
+          "romaji": "nyo"
         },
         {
           "type": "katakana2",
           "symbol": "ヒャ",
-          "romanji": "hya"
+          "romaji": "hya"
         },
         {
           "type": "katakana2",
           "symbol": "ヒュ",
-          "romanji": "hyu"
+          "romaji": "hyu"
         },
         {
           "type": "katakana2",
           "symbol": "ヒョ",
-          "romanji": "hyo"
+          "romaji": "hyo"
         },
         {
           "type": "katakana2",
           "symbol": "ビャ",
-          "romanji": "bya"
+          "romaji": "bya"
         },
         {
           "type": "katakana2",
           "symbol": "ビュ",
-          "romanji": "byu"
+          "romaji": "byu"
         },
         {
           "type": "katakana2",
           "symbol": "ビョ",
-          "romanji": "byo"
+          "romaji": "byo"
         },
         {
           "type": "katakana2",
           "symbol": "ピャ",
-          "romanji": "pya"
+          "romaji": "pya"
         },
         {
           "type": "katakana2",
           "symbol": "ピュ",
-          "romanji": "pyu"
+          "romaji": "pyu"
         },
         {
           "type": "katakana2",
           "symbol": "ピョ",
-          "romanji": "pyo"
+          "romaji": "pyo"
         },
         {
           "type": "katakana2",
           "symbol": "ミャ",
-          "romanji": "mya"
+          "romaji": "mya"
         },
         {
           "type": "katakana2",
           "symbol": "ミュ",
-          "romanji": "myu"
+          "romaji": "myu"
         },
         {
           "type": "katakana2",
           "symbol": "ミョ",
-          "romanji": "myo"
+          "romaji": "myo"
         },
         {
           "type": "katakana2",
           "symbol": "リャ",
-          "romanji": "rya"
+          "romaji": "rya"
         },
         {
           "type": "katakana2",
           "symbol": "リュ",
-          "romanji": "ryu"
+          "romaji": "ryu"
         },
         {
           "type": "katakana2",
           "symbol": "リョ",
-          "romanji": "ryo"
+          "romaji": "ryo"
         },
         {
           "type": "katakana2",
           "symbol": "チャ",
-          "romanji": "cha"
+          "romaji": "cha"
         },
         {
           "type": "katakana2",
           "symbol": "チュ",
-          "romanji": "chu"
+          "romaji": "chu"
         },
         {
           "type": "katakana2",
           "symbol": "チョ",
-          "romanji": "cho"
+          "romaji": "cho"
         },
         {
           "type": "katakana2",
           "symbol": "ヂャ",
-          "romanji": "dja"
+          "romaji": "dja"
         },
         {
           "type": "katakana2",
           "symbol": "ヂュ",
-          "romanji": "dju"
+          "romaji": "dju"
         },
         {
           "type": "katakana2",
           "symbol": "ヂョ",
-          "romanji": "djo"
+          "romaji": "djo"
         }
 ]
