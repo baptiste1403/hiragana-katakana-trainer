@@ -751,12 +751,13 @@ data = [
         },
         {
           "type": "katakana",
-          "symbol": "ハ",
+          "symbol": "ワ",
           "romaji": "wa"
         },
         {
           "type": "katakana",
-          "symbol": "オ",
+          "symbol": "ヲ"
+,
           "romaji": "wo"
         },
         {
