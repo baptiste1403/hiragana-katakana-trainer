@@ -1,0 +1,67 @@
+<parent-test>
+    <div class="question-box">
+        <test-question question={this.state.question}></test-question>
+        <test-answer answers={this.state.answers} refreshCallback={this.regenerate} addPointcallback={this.addPoint}></test-answer>
+        <div>{this.state.points}</div>
+    </div>
+    <style>
+        .question-box {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+            gap: 4vh;
+        }
+    </style>
+    <script>
+        export default{
+            state:{
+                answers : {},
+                question : "",
+                index : -1,
+                points : 0
+            },
+            onBeforeMount(props, state) {
+                this.generate();
+            },
+            onBeforeUpdate(props, state) {
+                this.generate();
+            },
+            getRandomInt(max) {
+                return Math.floor(Math.random() * max);
+            },
+            generate() {
+    
+                const randint = this.getRandomInt(data.length); // generate question and good answer
+                let listRomaji = [];
+                this.state.question = data[randint].symbol;
+                listRomaji.push(data[randint].romaji);
+
+                for(let i = 0; i < 3; i++) { // generate 3 other answers
+                    let element;
+                    do {
+                        element = data[this.getRandomInt(data.length)];
+                    } while((listRomaji.includes(element.romaji)));
+                    listRomaji.push(element.romaji);
+                }
+
+                for (let i = listRomaji.length - 1; i > 0; i--) { // shuffle the list of answer
+                    const j = Math.floor(Math.random() * (i + 1));
+                    const temp = listRomaji[i];
+                    listRomaji[i] = listRomaji[j];
+                    listRomaji[j] = temp;
+                }
+                
+                this.state.index = listRomaji.indexOf(data[randint].romaji); // get the index of the good answer
+                this.state.answers = {"list" : listRomaji, "solution": this.state.index};
+            },
+            addPoint() {
+                this.state.points++;
+            },
+            regenerate() {
+                this.generate();
+                this.update();
+            }
+        }
+    </script>
+</parent-test>

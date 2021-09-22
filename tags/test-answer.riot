@@ -1,0 +1,57 @@
+<test-answer>
+    <div class="answer-box">
+        <answer-btn each={ (item, i) in this.props.answers.list} symbol={item} id={i} callback={ this.buttonClicked }></answer-btn>
+    </div>
+    <style>
+        .answer-box {
+            margin: auto;
+            display: flex;
+            height: 41vh;
+            width: 41vh;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+            gap: 1vh;
+            align-items: center;
+            align-content: center;
+        }
+    </style>
+    <script>
+        export default {
+            state:{
+                isClickable:false
+            },
+            onBeforeMount(props, state) {
+                this.state.isClickable = true;
+            },
+            onBeforeUpdate(props, state) {
+                for(element of this.$$("answer-btn > div")) {
+                    element.classList.remove("true");
+                    element.classList.remove("false");
+                }
+                this.state.isClickable = true;
+            },
+            buttonClicked(index) {
+                let timeBeforeNext;
+                console.log(this.state.isClickable);
+                if(this.state.isClickable) {
+                    if(index == this.props.answers.solution) {
+                        this.$(`[id="${index}"] > div`).classList.add("true");
+                        this.props.addPointcallback();
+                        timeBeforeNext = 2000;
+                    } else {
+                        this.$(`[id="${this.props.answers.solution}"] > div`).classList.add("true");
+                        this.$(`[id="${index}"] > div`).classList.add("false");
+                        timeBeforeNext = 2000;
+                    }
+                    this.state.isClickable = false;
+                    setTimeout(() => {
+                        this.state.isClickable = true;
+                        this.props.refreshCallback();
+
+                    }, timeBeforeNext);
+                }
+            }
+        }
+    </script>
+</test-answer>

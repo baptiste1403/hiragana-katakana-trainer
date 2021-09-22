@@ -6,29 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hiragana & Katakana Trainer</title>
 
-    <script src="https://cdn.jsdelivr.net/npm/riot@6.0.4/riot+compiler.min.js"></script>
+    
     <script src="js/data.js"></script>
-    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/riot@6.0.4/riot+compiler.min.js"></script>
 
-    <script src="tags/hello-world.riot" type="riot"></script>
+    <script src="tags/parent-test.riot" type="riot"></script>
+    <script src="tags/test-question.riot" type="riot"></script>
+    <script src="tags/test-answer.riot" type="riot"></script>
+    <script src="tags/answer-btn.riot" type="riot"></script>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
     <body>
-        <div class="question-box">
-            <span class="question">#</span><br>
-            <div class="answer-box">
-                <div class="answer-btn"></div>
-                <div class="answer-btn"></div>
-                <div class="answer-btn"></div>
-                <div class="answer-btn"></div>
-            </div>
-        </div>
+        <parent-test></parent-test>
+        <script>
+            riot.compile().then(() => {
+                riot.mount('parent-test');
+            });
+        </script>
     </body>
-    <script>
-    (async () => {
-        await riot.compile();
-        riot.mount('hello-world');
-    })();
-    </script>
 </html>

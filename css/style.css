@@ -16,7 +16,7 @@ body {
 }
 
 
-.question-box{
+/*.question-box{
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -55,11 +55,10 @@ body {
     color: white;
     cursor: url("../assets/cursors/link.cur"), auto;
 }
-
 .true {
     background: chartreuse;
 }
 
 .false {
     background: crimson;
-}
+}*/

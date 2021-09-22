@@ -1,0 +1,37 @@
+<answer-btn>
+    <div class="answer-btn" onclick={ answered } id={this.props.index}>{this.props.symbol}</div>
+    <style>
+        .answer-btn {
+            display: flex;
+            background: #E56528;
+            height: 20vh;
+            line-height: 20vh;
+            width: 20vh;
+            flex-basis: 20vh;
+            border-radius: 2vh;
+            justify-content: center;
+            font-size: 8vh;
+            font-family: "thinoo";
+            color: white;
+            cursor: url("./assets/cursors/link.cur"), auto;
+        }
+        .true {
+            background: chartreuse;
+        }
+
+        .false {
+            background: crimson;
+        }
+    </style>
+    <script>
+        export default {
+            onBeforeUpdate(props, state) {
+                /*this.classList.remove("true");
+                this.classList.remove("false");*/
+            },
+            answered(event) {
+                this.props.callback(this.root.id);
+            }
+        }
+    </script>
+</answer-btn>
