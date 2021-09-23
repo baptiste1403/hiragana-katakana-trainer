@@ -1,8 +1,11 @@
 <parent-test>
     <div class="question-box">
+        <div class="health">HP : {this.state.lives}</div>
         <test-question question={this.state.question}></test-question>
-        <test-answer answers={this.state.answers} refreshCallback={this.regenerate} addPointcallback={this.addPoint}></test-answer>
-        <div>{this.state.points}</div>
+        <div class="timeBeforeFalse">{this.state.timeBeforeFalse}</div>
+        <timer time={this.state.timeBeforeFalse} removeLifecallback={this.removeLife}></timer>
+        <test-answer answers={this.state.answers} stopTimercallback={this.stopTimer} addPointcallback={this.addPoint} removeLifecallback={this.removeLife}></test-answer>
+        <div class="points">{this.state.points}</div>
     </div>
     <style>
         .question-box {
@@ -12,6 +15,19 @@
             align-items: center;
             gap: 4vh;
         }
+
+        .timeBeforeFalse {
+            font-family: "thinoo";
+        }
+
+        .health {
+            font-family: "thinoo";
+        }
+
+        .points {
+            font-family: "thinoo";
+            color: white
+        }
     </style>
     <script>
         export default{
@@ -19,19 +35,23 @@
                 answers : {},
                 question : "",
                 index : -1,
-                points : 0
+                points : 0,
+                lives : 5,
+                timeBeforeFalse : 50,
+                timer : 0,
             },
             onBeforeMount(props, state) {
                 this.generate();
             },
             onBeforeUpdate(props, state) {
-                this.generate();
+                
             },
             getRandomInt(max) {
                 return Math.floor(Math.random() * max);
             },
             generate() {
-    
+                
+                clearInterval(this.timer);
                 const randint = this.getRandomInt(data.length); // generate question and good answer
                 let listRomaji = [];
                 this.state.question = data[randint].symbol;
@@ -54,9 +74,19 @@
                 
                 this.state.index = listRomaji.indexOf(data[randint].romaji); // get the index of the good answer
                 this.state.answers = {"list" : listRomaji, "solution": this.state.index};
+                
             },
             addPoint() {
                 this.state.points++;
+                this.regenerate();
+            },
+            removeLife() {
+                this.state.lives--;
+                this.regenerate();
+            },
+            stopTimer() {
+                clearInterval(this.state.timer);
+                this.state.timeBeforeFalse=50;
             },
             regenerate() {
                 this.generate();
