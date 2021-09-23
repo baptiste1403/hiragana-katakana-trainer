@@ -1,22 +1,30 @@
 <timer>
-    <span class="timer">{this.state.time}</span>
+    <span class="unprogress-bar">{this.state.time}</span>
     <style>
-        .timer {
-            font-size: 3vh;
+		.unprogress-bar {
+			display: flex;
+			justify-content: center;
+			font-size: 3vh;
 			font-family: "thinoo";
-        }
+			line-height: 5vh;
+			background-color: green;
+			width: 41vh;
+			border-radius: 2.5vh;
+			height: 5vh;
+		}
     </style>
     <script>
         export default {
 			state : {
 				timer: 0,
-				time:50,
+				time:500,
 				launched: false,
+				barSize: undefined
 			},
 			onBeforeUpdate(props, state) {
 				if (!this.props.timerState) {
 					clearInterval(this.state.timer);
-					this.state.time=50;
+					this.state.time=this.props.resetValue;
 					this.state.launched=false;
 				} else if (this.props.timerState && !this.state.launched) {
 					this.state.launched=true;
@@ -24,6 +32,10 @@
 				}
 			},
 			startTimer() {
+				if(this.state.barSize == undefined) {
+					this.state.barSize = this.$(".unprogress-bar").clientWidth;
+					console.log("once only");
+				}
 				this.state.timer = setInterval(() => {
 
                     this.state.time--;
@@ -32,8 +44,9 @@
                         this.props.removeLifecallback(true);
 
                     }
+					this.$(".unprogress-bar").style.width = `${this.state.barSize * (this.state.time / this.props.resetValue)}px`;
 					this.update();
-                },100);
+                },10);
 			}
         }
     </script>

@@ -2,7 +2,7 @@
     <div class="question-box">
         <div class="health">HP : {this.state.lives}</div>
         <test-question question={this.state.question}></test-question>
-        <timer removeLifecallback={this.removeLife} timerState={this.state.timerState} resetValue={}></timer>
+        <timer removeLifecallback={this.removeLife} timerState={this.state.timerState} resetValue={this.state.timerValue}></timer>
         <test-answer endTime={this.state.endTime} mustReset={this.state.reset} answers={this.state.answers} stopTimercallback={this.stopTimer} addPointcallback={this.addPoint} removeLifecallback={this.removeLife}></test-answer>
         <div class="points">{this.state.points}</div>
     </div>
@@ -39,7 +39,7 @@
                 timerState : false,
                 reset: true,
                 endTime: false,
-                timerValue: 50,
+                timerValue: 500,
             },
             onBeforeMount(props, state) {
                 this.generate();
@@ -104,6 +104,7 @@
             },
             waitBeforeNext(waitTime) {
                 setTimeout(() => {
+                        this.state.timerValue = this.calculateTime(this.state.points);
                         this.regenerate();
                     }, waitTime);
             },
@@ -112,9 +113,14 @@
                     this.generate();
                     this.state.reset = true;
                     this.state.lives=5;
+                    this.state.points=0;
                     this.state.endTime = false;
+                    this.state.timerValue = this.calculateTime(this.state.points);
                     this.update();
                 }, 5000);
+            },
+            calculateTime(point) {
+                return Math.floor(((-10*Math.log(0.1*(point+20)))+57)*10);
             }
         }
     </script>
