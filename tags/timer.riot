@@ -1,5 +1,5 @@
 <timer>
-    <span class="timer">{this.props.time}</span>
+    <span class="timer">{this.state.time}</span>
     <style>
         .timer {
             font-size: 3vh;
@@ -8,7 +8,33 @@
     </style>
     <script>
         export default {
+			state : {
+				timer: 0,
+				time:50,
+				launched: false,
+			},
+			onBeforeUpdate(props, state) {
+				if (!this.props.timerState) {
+					clearInterval(this.state.timer);
+					this.state.time=50;
+					this.state.launched=false;
+				} else if (this.props.timerState && !this.state.launched) {
+					this.state.launched=true;
+					this.startTimer();
+				}
+			},
+			startTimer() {
+				this.state.timer = setInterval(() => {
 
+                    this.state.time--;
+                    //this.update();
+                    if (this.state.time == 0) {
+                        this.props.removeLifecallback(true);
+
+                    }
+					this.update();
+                },100);
+			}
         }
     </script>
 </timer>

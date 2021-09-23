@@ -25,31 +25,36 @@
                 this.state.isClickable = true;
             },
             onBeforeUpdate(props, state) {
-                for(element of this.$$("answer-btn > div")) {
-                    element.classList.remove("true");
-                    element.classList.remove("false");
+                this.state.isClickable = false;
+                if(this.props.mustReset) {
+                    for(element of this.$$("answer-btn > div")) {
+                        element.classList.remove("true");
+                        element.classList.remove("false");
+                    }
+                    this.state.isClickable = true;
                 }
-                this.state.isClickable = true;
+                if(this.props.endTime) {
+                    for(element of this.$$("answer-btn > div")) {
+                        element.classList.add("false");
+                    }
+                    let solution = this.$(`[id="${this.props.answers.solution}"] > div`);
+                    solution.classList.remove("false");
+                    solution.classList.add("true");
+
+                }
             },
             buttonClicked(index) {
-                let timeBeforeNext;
                 console.log(this.state.isClickable);
                 if(this.state.isClickable) {
-                    this.props.stopTimercallback();
                     if(index == this.props.answers.solution) {
                         this.$(`[id="${index}"] > div`).classList.add("true");
                         this.props.addPointcallback();
-                        timeBeforeNext = 500;
                     } else {
                         this.$(`[id="${this.props.answers.solution}"] > div`).classList.add("true");
                         this.$(`[id="${index}"] > div`).classList.add("false");
-                        this.props.removeLifecallback();
-                        timeBeforeNext = 2000;
+                        this.props.removeLifecallback(false);
                     }
                     this.state.isClickable = false;
-                    setTimeout(() => {
-                        this.state.isClickable = true;
-                    }, timeBeforeNext);
                 }
             }
         }

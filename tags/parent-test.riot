@@ -2,9 +2,8 @@
     <div class="question-box">
         <div class="health">HP : {this.state.lives}</div>
         <test-question question={this.state.question}></test-question>
-        <div class="timeBeforeFalse">{this.state.timeBeforeFalse}</div>
-        <timer time={this.state.timeBeforeFalse} removeLifecallback={this.removeLife}></timer>
-        <test-answer answers={this.state.answers} stopTimercallback={this.stopTimer} addPointcallback={this.addPoint} removeLifecallback={this.removeLife}></test-answer>
+        <timer removeLifecallback={this.removeLife} timerState={this.state.timerState} resetValue={}></timer>
+        <test-answer endTime={this.state.endTime} mustReset={this.state.reset} answers={this.state.answers} stopTimercallback={this.stopTimer} addPointcallback={this.addPoint} removeLifecallback={this.removeLife}></test-answer>
         <div class="points">{this.state.points}</div>
     </div>
     <style>
@@ -37,8 +36,10 @@
                 index : -1,
                 points : 0,
                 lives : 5,
-                timeBeforeFalse : 50,
-                timer : 0,
+                timerState : false,
+                reset: true,
+                endTime: false,
+                timerValue: 50,
             },
             onBeforeMount(props, state) {
                 this.generate();
@@ -51,7 +52,6 @@
             },
             generate() {
                 
-                clearInterval(this.timer);
                 const randint = this.getRandomInt(data.length); // generate question and good answer
                 let listRomaji = [];
                 this.state.question = data[randint].symbol;
@@ -77,20 +77,44 @@
                 
             },
             addPoint() {
+                this.state.timerState=false;
+                this.state.reset = false;
                 this.state.points++;
-                this.regenerate();
+                this.update();
+                this.waitBeforeNext(500);
             },
-            removeLife() {
+            removeLife(isEndTime) {
+                this.state.timerState=false;
+                this.state.reset = false;
                 this.state.lives--;
-                this.regenerate();
-            },
-            stopTimer() {
-                clearInterval(this.state.timer);
-                this.state.timeBeforeFalse=50;
+                this.state.endTime = isEndTime;
+                this.update();
+                if (this.state.lives==0) {
+                    this.waitBeforeReset();
+                } else {
+                    this.waitBeforeNext(2000);
+                }
             },
             regenerate() {
                 this.generate();
+                this.state.timerState= true;
+                this.state.reset = true;
+                this.state.endTime = false;
                 this.update();
+            },
+            waitBeforeNext(waitTime) {
+                setTimeout(() => {
+                        this.regenerate();
+                    }, waitTime);
+            },
+            waitBeforeReset() {
+                setTimeout(() => {
+                    this.generate();
+                    this.state.reset = true;
+                    this.state.lives=5;
+                    this.state.endTime = false;
+                    this.update();
+                }, 5000);
             }
         }
     </script>
