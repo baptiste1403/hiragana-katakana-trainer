@@ -1,6 +1,6 @@
 <parent-test>
     <div class="question-box">
-        <div class="health">HP : {this.state.lives}</div>
+        <div id="health" class="health">HP : {this.state.lives}</div>
         <test-question question={this.state.question}></test-question>
         <timer removeLifecallback={this.removeLife} timerState={this.state.timerState} resetValue={this.state.timerValue}></timer>
         <test-answer endTime={this.state.endTime} mustReset={this.state.reset} answers={this.state.answers} stopTimercallback={this.stopTimer} addPointcallback={this.addPoint} removeLifecallback={this.removeLife}></test-answer>
@@ -12,7 +12,10 @@
             flex-direction: column;
             align-content: center;
             align-items: center;
-            gap: 4vh;
+        }
+        test-answer {
+            margin-top:4vh;
+            margin-bottom:4vh;
         }
 
         .timeBeforeFalse {
@@ -21,11 +24,17 @@
 
         .health {
             font-family: "thinoo";
+            font-size: 5vh;
+        }
+
+        .critical {
+            color: crimson;
         }
 
         .points {
             font-family: "thinoo";
-            color: white
+            color: white;
+            font-size: 5vh;
         }
     </style>
     <script>
@@ -84,6 +93,7 @@
                 this.waitBeforeNext(500);
             },
             removeLife(isEndTime) {
+                var vie = document.getElementById('health');
                 this.state.timerState=false;
                 this.state.reset = false;
                 this.state.lives--;
@@ -92,6 +102,11 @@
                 if (this.state.lives==0) {
                     this.waitBeforeReset();
                 } else {
+                    if (this.state.lives==1 || this.state.lives==0) {
+                        vie.classList.add("critical");
+                    } else {
+                        vie.classList.remove("critical");
+                    }
                     this.waitBeforeNext(2000);
                 }
             },
@@ -111,6 +126,7 @@
             waitBeforeReset() {
                 setTimeout(() => {
                     this.generate();
+                    document.getElementById('health').classList.remove("critical");
                     this.state.reset = true;
                     this.state.lives=5;
                     this.state.points=0;
