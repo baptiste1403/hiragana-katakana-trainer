@@ -25,10 +25,6 @@
     </style>
     <script>
         export default {
-            onBeforeUpdate(props, state) {
-                /*this.classList.remove("true");
-                this.classList.remove("false");*/
-            },
             answered(event) {
                 this.props.callback(this.root.id);
             }
